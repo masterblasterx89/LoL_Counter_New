@@ -11,20 +11,20 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Variables that get assigned.
      */
-    float total_score_a = 1;
-    float total_score_b = 1;
-    float percentage_a = 0;
-    float percentage_b = 0;
-    String format_percentage_a = "";
-    String format_percentage_b = "";
+    float totalScoreA = 1;
+    float totalScoreB = 1;
+    float percentageA = 0;
+    float percentageB = 0;
+    String formatPercentageA = "";
+    String formatPercentageB = "";
 
-    int total_kills_a = 0;
-    int total_td_a = 0;
-    int total_baron_a = 0;
+    int totalKillsA = 0;
+    int totalTdA = 0;
+    int totalBaronA = 0;
 
-    int total_kills_b = 0;
-    int total_td_b = 0;
-    int total_baron_b = 0;
+    int totalKillsB = 0;
+    int totalTdB = 0;
+    int totalBaronB = 0;
 
 
     @Override
@@ -39,124 +39,124 @@ public class MainActivity extends AppCompatActivity {
      * on counters and the percentage.
      */
 
-    public void increment_by_kill_a(View view) {
-        float percentage_a_float;
-        float percentage_b_float;
-        total_score_a = total_score_a + 1;
-        total_kills_a = total_kills_a + 1;
-        percentage_a_float = total_score_a / (total_score_a + total_score_b);
-        percentage_b_float = total_score_b / (total_score_b + total_score_a);
-        percentage_a = percentage_a_float * 100;
-        percentage_b = percentage_b_float * 100;
-        int percent_a = (int) percentage_a;
-        int percent_b = (int) percentage_b;
+    public void incrementByKillA(View view) {
+        float percentageA_float;
+        float percentageB_float;
+        totalScoreA = totalScoreA + 1;
+        totalKillsA = totalKillsA + 1;
+        percentageA_float = totalScoreA / (totalScoreA + totalScoreB);
+        percentageB_float = totalScoreB / (totalScoreB + totalScoreA);
+        percentageA = percentageA_float * 100;
+        percentageB = percentageB_float * 100;
+        int percent_a = (int) percentageA;
+        int percent_b = (int) percentageB;
         displayForTeamA(percent_a + "%");
         displayForTeamB(percent_b + "%");
-        displayForKillsA(total_kills_a);
+        displayForKillsA(totalKillsA);
     }
 
-    public void increment_by_tower_a(View view) {
-        float percentage_a_float;
-        float percentage_b_float;
-        total_td_a = total_td_a + 1;
-        total_score_a = total_score_a + 10;
-        percentage_a_float = total_score_a / (total_score_a + total_score_b);
-        percentage_b_float = total_score_b / (total_score_b + total_score_a);
-        percentage_a = percentage_a_float * 100;
-        percentage_b = percentage_b_float * 100;
-        int percent_a = (int) percentage_a;
-        int percent_b = (int) percentage_b;
+    public void incrementByTowerA(View view) {
+        float percentageA_float;
+        float percentageB_float;
+        totalTdA = totalTdA + 1;
+        totalScoreA = totalScoreA + 10;
+        percentageA_float = totalScoreA / (totalScoreA + totalScoreB);
+        percentageB_float = totalScoreB / (totalScoreB + totalScoreA);
+        percentageA = percentageA_float * 100;
+        percentageB = percentageB_float * 100;
+        int percent_a = (int) percentageA;
+        int percent_b = (int) percentageB;
         displayForTeamA(percent_a + "%");
         displayForTeamB(percent_b + "%");
-        displayForTdA(total_td_a);
+        displayForTdA(totalTdA);
     }
 
-    public void increment_by_baron_a(View view) {
-        float percentage_a_float;
-        float percentage_b_float;
-        total_score_a = total_score_a + 5;
-        total_baron_a = total_baron_a + 1;
-        percentage_a_float = total_score_a / (total_score_a + total_score_b);
-        percentage_b_float = total_score_b / (total_score_b + total_score_a);
-        percentage_a = percentage_a_float * 100;
-        percentage_b = percentage_b_float * 100;
-        int percent_a = (int) percentage_a;
-        int percent_b = (int) percentage_b;
+    public void incrementByBaronA(View view) {
+        float percentageA_float;
+        float percentageB_float;
+        totalScoreA = totalScoreA + 5;
+        totalBaronA = totalBaronA + 1;
+        percentageA_float = totalScoreA / (totalScoreA + totalScoreB);
+        percentageB_float = totalScoreB / (totalScoreB + totalScoreA);
+        percentageA = percentageA_float * 100;
+        percentageB = percentageB_float * 100;
+        int percent_a = (int) percentageA;
+        int percent_b = (int) percentageB;
         displayForTeamA(percent_a + "%");
         displayForTeamB(percent_b + "%");
-        displayForBaronA(total_baron_a);
+        displayForBaronA(totalBaronA);
     }
 
-    public void increment_by_kill_b(View view) {
-        float percentage_a_float;
-        float percentage_b_float;
-        total_score_b = total_score_b + 1;
-        total_kills_b = total_kills_b + 1;
-        percentage_a_float = total_score_a / (total_score_a + total_score_b);
-        percentage_b_float = total_score_b / (total_score_b + total_score_a);
-        percentage_a = percentage_a_float * 100;
-        int percent_a = (int) percentage_a;
-        percentage_b = percentage_b_float * 100;
-        int percent_b = (int) percentage_b;
+    public void incrementByKillB(View view) {
+        float percentageA_float;
+        float percentageB_float;
+        totalScoreB = totalScoreB + 1;
+        totalKillsB = totalKillsB + 1;
+        percentageA_float = totalScoreA / (totalScoreA + totalScoreB);
+        percentageB_float = totalScoreB / (totalScoreB + totalScoreA);
+        percentageA = percentageA_float * 100;
+        int percent_a = (int) percentageA;
+        percentageB = percentageB_float * 100;
+        int percent_b = (int) percentageB;
         displayForTeamA(percent_a + "%");
         displayForTeamB(percent_b + "%");
-        displayForKillsB(total_kills_b);
+        displayForKillsB(totalKillsB);
 
     }
 
-    public void increment_by_tower_b(View view) {
-        float percentage_a_float;
-        float percentage_b_float;
-        total_score_b = total_score_b + 10;
-        total_td_b = total_td_b + 1;
-        percentage_a_float = total_score_a / (total_score_a + total_score_b);
-        percentage_b_float = total_score_b / (total_score_b + total_score_a);
-        percentage_a = percentage_a_float * 100;
-        int percent_a = (int) percentage_a;
-        percentage_b = percentage_b_float * 100;
-        int percent_b = (int) percentage_b;
+    public void incrementByTowerB(View view) {
+        float percentageA_float;
+        float percentageB_float;
+        totalScoreB = totalScoreB + 10;
+        totalTdB = totalTdB + 1;
+        percentageA_float = totalScoreA / (totalScoreA + totalScoreB);
+        percentageB_float = totalScoreB / (totalScoreB + totalScoreA);
+        percentageA = percentageA_float * 100;
+        int percent_a = (int) percentageA;
+        percentageB = percentageB_float * 100;
+        int percent_b = (int) percentageB;
         displayForTeamA(percent_a + "%");
         displayForTeamB(percent_b + "%");
-        displayForTdB(total_td_b);
+        displayForTdB(totalTdB);
     }
 
-    public void increment_by_baron_b(View view) {
-        float percentage_a_float;
-        float percentage_b_float;
-        total_baron_b = total_baron_b + 1;
-        total_score_b = total_score_b + 5;
-        percentage_a_float = total_score_a / (total_score_a + total_score_b);
-        percentage_b_float = total_score_b / (total_score_b + total_score_a);
-        percentage_a = percentage_a_float * 100;
-        int percent_a = (int) percentage_a;
-        percentage_b = percentage_b_float * 100;
-        int percent_b = (int) percentage_b;
+    public void incrementByBaronB(View view) {
+        float percentageA_float;
+        float percentageB_float;
+        totalBaronB = totalBaronB + 1;
+        totalScoreB = totalScoreB + 5;
+        percentageA_float = totalScoreA / (totalScoreA + totalScoreB);
+        percentageB_float = totalScoreB / (totalScoreB + totalScoreA);
+        percentageA = percentageA_float * 100;
+        int percent_a = (int) percentageA;
+        percentageB = percentageB_float * 100;
+        int percent_b = (int) percentageB;
         displayForTeamA(percent_a + "%");
         displayForTeamB(percent_b + "%");
-        displayForBaronB(total_baron_b);
+        displayForBaronB(totalBaronB);
 
     }
 
     /**
      * Resets all the counters.
      */
-    public void reset_score(View view) {
-        total_score_a = 0;
-        total_score_b = 0;
-        displayForTeamA(format_percentage_a);
-        displayForTeamB(format_percentage_b);
-        total_kills_a = 0;
-        total_td_a = 0;
-        total_baron_a = 0;
-        total_kills_b = 0;
-        total_td_b = 0;
-        total_baron_b = 0;
-        displayForKillsA(total_kills_a);
-        displayForKillsB(total_kills_b);
-        displayForTdA(total_td_b);
-        displayForTdB(total_td_b);
-        displayForBaronA(total_baron_a);
-        displayForBaronB(total_baron_b);
+    public void resetScore(View view) {
+        totalScoreA = 0;
+        totalScoreB = 0;
+        displayForTeamA(formatPercentageA);
+        displayForTeamB(formatPercentageB);
+        totalKillsA = 0;
+        totalTdA = 0;
+        totalBaronA = 0;
+        totalKillsB = 0;
+        totalTdB = 0;
+        totalBaronB = 0;
+        displayForKillsA(totalKillsA);
+        displayForKillsB(totalKillsB);
+        displayForTdA(totalTdB);
+        displayForTdB(totalTdB);
+        displayForBaronA(totalBaronA);
+        displayForBaronB(totalBaronB);
 
     }
 

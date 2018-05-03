@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/button_padding"
         android:background="#D7941E"
-        android:onClick="reset_score"
+        android:onClick="resetScore"
         android:text="@string/New_Game" />
 
     <TextView
@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/button_margin"
                 android:background="@color/increment_button_color"
-                android:onClick="increment_by_kill_a"
+                android:onClick="incrementByKillA"
                 android:text="@string/plus_Kill" />
 
             <Button
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/button_margin"
                 android:background="@color/increment_button_color"
-                android:onClick="increment_by_tower_a"
+                android:onClick="incrementByTowerA"
                 android:text="@string/plus_Tower_Destroyed" />
 
             <Button
@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/button_margin"
                 android:background="@color/increment_button_color"
-                android:onClick="increment_by_baron_a"
+                android:onClick="incrementByBaronA"
                 android:text="@string/plus_Baron" />
 
             <TextView
@@ -180,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/button_margin"
                 android:background="@color/increment_button_color"
-                android:onClick="increment_by_kill_b"
+                android:onClick="incrementByKillB"
                 android:text="@string/plus_Kill" />
 
             <Button
@@ -188,7 +188,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/button_margin"
                 android:background="@color/increment_button_color"
-                android:onClick="increment_by_tower_b"
+                android:onClick="incrementByTowerB"
                 android:text="@string/plus_Tower_Destroyed" />
 
             <Button
@@ -196,7 +196,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/button_margin"
                 android:background="@color/increment_button_color"
-                android:onClick="increment_by_baron_b"
+                android:onClick="incrementByBaronB"
                 android:text="@string/Baron" />
 
             <TextView
