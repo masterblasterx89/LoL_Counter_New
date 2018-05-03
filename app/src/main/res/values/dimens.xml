@@ -6,7 +6,7 @@
     <dimen name="TD_text_margin">12dp</dimen>
     <dimen name="point_text_size">24sp</dimen>
     <dimen name="point_number_margin">12dp</dimen>
-    <dimen name="point_label_margin">12sp</dimen>
+    <dimen name="point_label_margin">12dp</dimen>
     <dimen name="percent_text_size">14sp</dimen>
     <dimen name="percent_number_size">56sp</dimen>
     <dimen name="percent_text_padding">4dp</dimen>
