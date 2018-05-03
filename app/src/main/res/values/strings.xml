@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LOL_Counter_New</string>
+    <string name="TD">TD</string>
+    <string name="Baron">Baron</string>
+    <string name="Kills">Kills</string>
+    <string name="Percentage_to_Win">Percentage to Win</string>
+    <string name="plus_Kill">+Kill</string>
+    <string name="plus_Tower_Destroyed">+Tower Destroyed</string>
+    <string name="plus_Baron">+Baron</string>.
+    <string name="zero">0</string>
+    <string name="New_Game">New Game</string>
+    <string name="fifty_percent">50%</string>
+
+
+
+</resources>

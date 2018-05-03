@@ -1,0 +1,236 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/lolbackground">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/button_padding"
+        android:background="#D7941E"
+        android:onClick="reset_score"
+        android:text="@string/New_Game" />
+
+    <TextView
+        android:id="@+id/baron_text_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/baron_text_marginBottom"
+        android:text="@string/Baron"
+        android:textColor="@color/label_text_color"
+        android:textSize="@dimen/point_text_size" />
+
+    <TextView
+        android:id="@+id/TD_text_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/baron_text_a"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/point_label_margin"
+        android:text="@string/TD"
+        android:textColor="@color/label_text_color"
+        android:textSize="@dimen/point_text_size" />
+
+    <TextView
+        android:id="@+id/kills_text_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/TD_text_a"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/point_label_margin"
+        android:text="@string/Kills"
+        android:textColor="@color/label_text_color"
+        android:textSize="@dimen/point_text_size" />
+
+
+    <LinearLayout
+        android:baselineAligned="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/display_team_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/percent_text_padding"
+                android:text="@string/Percentage_to_Win"
+                android:textColor="@color/percent_text_color"
+                android:textSize="@dimen/percent_text_size" />
+
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/percent_text_padding"
+                android:text="@string/fifty_percent"
+                android:textColor="@color/percent_text_color"
+                android:textSize="@dimen/percent_number_size" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@color/increment_button_color"
+                android:onClick="increment_by_kill_a"
+                android:text="@string/plus_Kill" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@color/increment_button_color"
+                android:onClick="increment_by_tower_a"
+                android:text="@string/plus_Tower_Destroyed" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@color/increment_button_color"
+                android:onClick="increment_by_baron_a"
+                android:text="@string/plus_Baron" />
+
+            <TextView
+                android:id="@+id/kills_score_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/point_number_margin"
+                android:gravity="center"
+                android:text="@string/zero"
+                android:textColor="@color/label_number_color"
+                android:textSize="@dimen/point_text_size" />
+
+            <TextView
+                android:id="@+id/td_score_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/point_number_margin"
+                android:gravity="center"
+                android:text="@string/zero"
+                android:textColor="@color/label_number_color"
+                android:textSize="@dimen/point_text_size" />
+
+            <TextView
+                android:id="@+id/baron_score_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/point_number_margin"
+                android:gravity="center"
+                android:text="@string/zero"
+                android:textColor="@color/label_number_color"
+                android:textSize="@dimen/point_text_size" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/display_team_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/percent_text_padding"
+                android:text="@string/Percentage_to_Win"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/percent_text_size" />
+
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/percent_text_padding"
+                android:text="@string/fifty_percent"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/percent_number_size" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@color/increment_button_color"
+                android:onClick="increment_by_kill_b"
+                android:text="@string/plus_Kill" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@color/increment_button_color"
+                android:onClick="increment_by_tower_b"
+                android:text="@string/plus_Tower_Destroyed" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/button_margin"
+                android:background="@color/increment_button_color"
+                android:onClick="increment_by_baron_b"
+                android:text="@string/Baron" />
+
+            <TextView
+                android:id="@+id/kills_score_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/point_number_margin"
+                android:gravity="center"
+                android:text="@string/zero"
+                android:textColor="@color/label_number_color"
+                android:textSize="@dimen/point_text_size" />
+
+            <TextView
+                android:id="@+id/td_score_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/point_number_margin"
+                android:gravity="center"
+                android:text="@string/zero"
+                android:textColor="@color/label_number_color"
+                android:textSize="@dimen/point_text_size" />
+
+            <TextView
+                android:id="@+id/baron_score_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/point_number_margin"
+                android:gravity="center"
+                android:text="@string/zero"
+                android:textColor="@color/label_number_color"
+                android:textSize="@dimen/point_text_size" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
